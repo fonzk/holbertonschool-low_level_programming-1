@@ -2,7 +2,7 @@
 
 /*
  * main - entry point
- * Description - Use puts
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
