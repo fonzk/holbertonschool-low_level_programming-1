@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
+/**
  * main - entry point
- *
+ * Description: Uses puts to write string
  * Return: Always 0 (Success)
  */
 int main(void)
