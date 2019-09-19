@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  * Descriptions: program prints all possible combo of single-digit numbers.
@@ -6,7 +7,7 @@
  */
 int main(void)
 {
-	char i = '0';
+	int i = '0';
 
 	while (i <= '9')
 	{
