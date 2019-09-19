@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  * Descriptions: Write a program that prints single digits base 10 from 0
- * Return 0 if successful
+ * Return: 0 if successful
  */
 int main(void)
 {
