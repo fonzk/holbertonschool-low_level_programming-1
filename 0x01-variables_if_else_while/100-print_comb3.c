@@ -7,13 +7,12 @@
 int main(void)
 {
 	int a = 0;
-	int b;
+	int b = a + 1;
 
-	while (a < '9')
+	while (a <= '8')
 	{
 		while (b <= '9')
 		{
-			b = a + 1;
 			putchar (a);
 			putchar (b);
 			if (a != 8)
