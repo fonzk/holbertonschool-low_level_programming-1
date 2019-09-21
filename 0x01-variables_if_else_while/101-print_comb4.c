@@ -15,11 +15,11 @@ int main(void)
 		b = a + 1;
 		while (b <= '8')
 		{
-			c = a + 2;
+			c = b + 1;
 			while (c <= '9')
 			{
 			putchar (a);
-			putchar (b++);
+			putchar (b);
 			putchar (c);
 			if (a != '7')
 			{
