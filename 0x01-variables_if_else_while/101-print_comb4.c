@@ -13,7 +13,7 @@ int main(void)
 	while (a < '8')
 	{
 		b = a + 1;
-		while (b <= '9')
+		while (b <= '8')
 		{
 			c = a + 2;
 			while (c <= '9')
