@@ -15,6 +15,9 @@ int main(void)
 		b = a + 1;
 		while (b <= '9')
 		{
+			c = a + 2;
+			while (c <= '9')
+			{
 			putchar (a);
 			putchar (b++);
 			putchar (c);
@@ -24,6 +27,8 @@ int main(void)
 				putchar(' ');
 			}
 			c++;
+			}
+			b++;
 		}
 		a++;
 	}
