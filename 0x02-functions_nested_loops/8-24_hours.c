@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * jack_bauer - entry point
+ * jack_bauer - Entry point
  * Return: 0 if successful
  */
 
@@ -24,5 +24,5 @@ void jack_bauer(void)
 			++minute;
 		}
 		++hour;
-	 }
+	}
 }
