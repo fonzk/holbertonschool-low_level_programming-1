@@ -3,20 +3,18 @@
 /**
  * print_last_digit - Input
  * @r: number to print last digit
- * Return: Absolute value if negative
+ * Return: Absolute value if negative, last digit otherwise
  */
 int print_last_digit(int r)
 {
-	int rlast;
-	rlast = r % 10;
 	r = r % 10;
 
-	if (rlast < 0)
-		rlast = rlast * -1;
-			return (rlast);
-			_putchar(rlast + '0');
-			else if
-				_putchar(r + '0');
-
-	_putchar('\n');
+	if (r < 0)
+	{
+		r = r * -1;
+		_putchar(r);
+	}
+	else
+		_putchar(r);
+	return (r);
 }
