@@ -1,0 +1,12 @@
+# 0x05. C - Pointers, arrays and strings
+
+### 0. 98 Battery st.
+### 1. Don't swap horses in crossing a stream
+### 2. This report defends itself against the risk of being read
+### 3. I do not fear computers. I fear the lack of them
+### 4. I can only go one way. I've not got a reverse gear
+### 5. A good engineer things in reverse
+### 6. Half the lies they tell about me aren't true
+### 7. Winning is only half of it
+### 8. Arrays are pointers
+### 9. strcpy
