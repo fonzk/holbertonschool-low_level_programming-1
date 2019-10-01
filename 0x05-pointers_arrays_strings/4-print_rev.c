@@ -7,22 +7,21 @@
  */
 void print_rev(char *s)
 {
-	int count;
+	int counter;
 
-	count = 0;
+	counter = 0;
 
 	while (*s)
 	{
-		count++;
+		counter++;
 		s++;
 	}
 	s--;
-	while (count)
+	while (counter)
 	{
 		_putchar(*s);
 		s--;
-		count--;
+		counter--;
 	}
 	_putchar('\n');
-
 }
