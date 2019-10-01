@@ -17,7 +17,7 @@ void rev_string(char *s)
 	}
 	s--;
 
-	while (counter / 2)
+	while (counter / 2 > 0)
 	{
 		interim = *endp;
 		*endp = *s;
