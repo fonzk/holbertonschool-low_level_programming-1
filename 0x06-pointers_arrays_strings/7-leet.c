@@ -14,13 +14,12 @@ char *leet(char *s)
 
 	while (s[i])
 	{
-		while (let[j])
+		for (j = 0; let[j]; j++)
 		{
 			if (let[j] == s[i])
 			{
 				s[i] = num[j];
 			}
-			j++;
 		}
 		i++;
 	}
