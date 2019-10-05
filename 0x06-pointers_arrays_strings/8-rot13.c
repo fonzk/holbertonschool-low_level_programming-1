@@ -7,22 +7,22 @@
 char *rot13(char *s)
 {
 	int i;
-	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *string = s;
+	char input[] =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char output[] =
+		"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	i = 0;
 
-	while (str[i])
+	while (*s)
 	{
-		while ((str[i] != input[i] && input[i])
-			{
+		while (*s != input[i] && input[i])
 				i++;
-			}
-			while[input[i]
-			      {
-				      output[i] = input[i];
-				      i++;
-			      }
+		if (input[i])
+				*s = output[i];
+				      s++;
+				      i = 0;
 	}
-			return (s);
+			return (string);
 }
