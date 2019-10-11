@@ -11,24 +11,27 @@ int _atoi(char *s)
 	int value = 0;
 	int sign = 1;
 
-	while (*s < '0' || *s > '9')
-	{
-		if (*s == '-')
-			sign = -sign;
-		s++;
+       	while (*s < '0' || *s > '9')
+       	{
+       		if (*s == '-')
+       			sign = -sign;
+       		s++;
 	}
-	while (*s >= '0' && *s <= '9')
-	{
-		if (value >= 0)
-		{
-			value *= 10;
-			value += (*s - '0');
-			s++;
-		}
-		else
-		{
-			break;
-		}
-	}
+
+       	while (*s >= '0' && *s <= '9')
+       	{
+       	     	if (value >= 0)
+       	       	{
+       	       		value *= 10;
+       	       		value += (*s - '0');
+       	       		s++;
+       	       	}
+       	       	else
+       	       	{
+             		value *= 10;
+       	       		value += (*s - '0');
+       	       		s++;
+       	       	}
+       	}
 	return (value * sign);
 }
