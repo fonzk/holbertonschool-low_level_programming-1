@@ -14,17 +14,18 @@ int _atoi(char *s)
        	do
 	{
 		if (*s == '-')
+		{
 			sign = -sign;
-
+		}
+		else if (value > 0)
+		{
+			break;
+		}
 		else if ((*s >= '0' && *s <= '9') && *s != 0)
 		{
       	       		value *= 10;
        	       		value += (*s - '0');
 		}
-       	       	else if (value > 0)
-       	       	{
-			break;
-       	       	}
        	}while (*s++);
 
 	return (value * sign);
