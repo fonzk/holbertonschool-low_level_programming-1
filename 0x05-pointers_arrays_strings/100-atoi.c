@@ -22,16 +22,15 @@ int _atoi(char *s)
 		if (value >= 0)
 		{
 			value *= 10;
-			value += (int) (*s - '0');
+			value += (*s - '0');
 			s++;
 		}
 		else
 		{
 			value *= 10;
-			value += (int) (*s - '0');
+			value += (*s - '0');
 			s++;
 		}
 	}
-	sign = -sign;
 	return (value * sign);
 }
