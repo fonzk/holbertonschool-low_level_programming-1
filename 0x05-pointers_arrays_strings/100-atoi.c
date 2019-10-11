@@ -27,9 +27,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			value *= 10;
-			value += (*s - '0');
-			s++;
+			break;
 		}
 	}
 	return (value * sign);
