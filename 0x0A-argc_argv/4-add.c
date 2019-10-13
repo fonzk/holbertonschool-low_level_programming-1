@@ -11,11 +11,11 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
-	long int sum = 0;
+	int sum = 0;
 
 	while (i < argc)
 	{
-		if (!atoi(argv[i]))
+		if (*argv[i] == 0 || atoi(argv[i]) <= 0)
 		{
 			printf("Error\n");
 			return (1);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		i++;
 	}
 
-	printf("%ld\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
