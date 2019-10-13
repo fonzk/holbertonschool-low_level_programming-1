@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
-	int sum = 0;
+	long int sum = 0;
 
 	if (argc < 1)
 	{
