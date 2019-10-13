@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 	} while (i < argc);
 
-	printf("%i\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
