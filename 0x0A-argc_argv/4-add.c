@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if  (!atoi(argv[i]))
+		if (!atoi(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 			i++;
 
 	}
-
 	printf("%d\n", sum);
 
 	return (0);
