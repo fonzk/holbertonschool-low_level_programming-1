@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 		{
 			sum = sum + atoi(argv[i]);
 		}
-		else
+		else if (!(*argv[i] > '0' && *argv[i] < '9'))
 		{
 			printf("Error\n");
 			return (1);
 		}
-       		i++;
+		i++;
 	}
 
 	printf("%ld\n", sum);
