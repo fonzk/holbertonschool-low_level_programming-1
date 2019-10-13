@@ -13,11 +13,6 @@ int main(int argc, char *argv[])
 	int i = 1;
 	long int sum = 0;
 
-	if (argc < 0)
-	{
-		printf("%d\n", 0);
-	}
-
 	while (i < argc)
 	{
 		if (*argv[i] == 0 || atoi(argv[i]) <= 0)
