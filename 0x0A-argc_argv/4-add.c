@@ -15,12 +15,12 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 		return (0);
 	}
 
-	do {
-
+	while (i < argc)
+	{
 		if  (!atoi(argv[i]))
 		{
 			printf("Error\n");
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 			sum = sum + atoi(argv[i]);
 			i++;
 
-	} while (i < argc);
+	}
 
 	printf("%d\n", sum);
 
