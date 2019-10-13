@@ -3,20 +3,35 @@
 
 /**
  * main - entry point
- * @argc: command
+ * @argc: command line arguments
  * @argv: command line integers to add
  * Return: 1 if no number, 0 if successful
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i = 1;
 	int sum;
 
-	do{
-		sum = sum + atoi(argv[i]);
-		i++;
-	}while (i < argc);
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	do {
+
+		if  (!atoi(argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+			sum = sum + atoi(argv[i]);
+			i++;
+
+	} while (i < argc);
+
 	printf("%i\n", sum);
 
 	return (0);
