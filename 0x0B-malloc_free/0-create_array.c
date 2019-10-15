@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * creat_array - create an array of characters
+ * create_array - create an array of characters
  * @size: size of array
  * @c: characters
  * Return: c
