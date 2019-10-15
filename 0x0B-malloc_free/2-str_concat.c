@@ -22,10 +22,10 @@ int _strlen(char *s)
 }
 
 /**
- *
- *
- *
- *
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: 2 strings together or NULL if fail
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -54,5 +54,5 @@ char *str_concat(char *s1, char *s2)
 
 	buffer[i] = '\0';
 
-	return(buffer);
+	return (buffer);
 }
