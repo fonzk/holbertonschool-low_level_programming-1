@@ -49,6 +49,9 @@ char *_strdup(char *str)
 		return (NULL);
 
 	buffer = malloc(_strlen(str) + 1);
+	if (buffer == NULL)
+		return (NULL);
+
 	_strcpy(buffer, str);
 	return (buffer);
 }
