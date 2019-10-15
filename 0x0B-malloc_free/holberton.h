@@ -5,4 +5,5 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 int _putchar(char c);
-
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
