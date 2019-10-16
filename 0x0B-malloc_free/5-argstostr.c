@@ -71,5 +71,7 @@ char *argstostr(int ac, char **av)
 		_strcat(buffer, av[i]);
 		_strcat(buffer, "\n");
 	}
+	if (buffer == NULL)
+		return (NULL);
 	return (buffer);
 }
