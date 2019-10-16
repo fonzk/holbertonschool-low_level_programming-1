@@ -35,9 +35,9 @@ int **alloc_grid(int width, int height)
 		}
 	}
 
-       	for (j = 0; j < width; j++)
+       	for (j = 0; j < height; j++)
 	{
-		for (y = 0; y < height; y++)
+		for (y = 0; y < width; y++)
 			array2d[j][y] = 0;
 	}
 		return (array2d);
