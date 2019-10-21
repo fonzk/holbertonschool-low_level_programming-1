@@ -2,7 +2,10 @@
 #ifndef __FILE__
 #define __FILE__
 #endif
-
+/**
+ * main - entry point
+ * Return: Always 0
+ */
 int main(void)
 {
 	printf("%s\n", __FILE__);
