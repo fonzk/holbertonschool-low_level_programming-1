@@ -3,7 +3,7 @@
 
 
 /**
- * free_dog - input
+ * struct dog - input
  * @name: name of the dog
  * @age: dog's age
  * @owner: the owner
