@@ -3,13 +3,14 @@
 #include <stdio.h>
 
 /**
- * op_add -
- *
- * Return:
+ * main - entry point
+ * @argc: number of arguments
+ * @argv: values of arguments
+ * Return: 0
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int (*p2func)(int,int);
+	int (*p2func)(int, int);
 
 	if (argc != 4)
 	{
@@ -20,14 +21,14 @@ int main (int argc, char *argv[])
 	if ((atoi(argv[3]) == 0) && (*argv[2] == '%' || *argv[2] == '/'))
 	{
 		printf("Error\n");
-		return(100);
+		exit(100);
 	}
 
 	p2func = get_op_func(argv[2]);
 	if (p2func == NULL)
 	{
 		printf("Error\n");
-		return(99);
+		exit(99);
 	}
 	printf("%d\n", p2func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
