@@ -17,18 +17,17 @@ int main (int argc, char *argv[])
 		exit(98);
 	}
 
-	if (atoi(argv[3]) == 0 && ((*argv[2] == '%') ||
-				   (*argv[2] == '/')))
+	if ((atoi(argv[3]) == 0) && (*argv[2] == '%' || *argv[2] == '/'))
 	{
 		printf("Error\n");
-		exit(100);
+		return(100);
 	}
 
 	p2func = get_op_func(argv[2]);
 	if (p2func == NULL)
 	{
 		printf("Error\n");
-		exit(99);
+		return(99);
 	}
 	printf("%d\n", p2func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
