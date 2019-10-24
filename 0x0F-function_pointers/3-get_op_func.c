@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdlib.h>
 
 /**
  * get_op_func - math function associated with corresponding symbol
@@ -20,8 +21,8 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op)
 	{
-		if (*s == *(ops[i]).op)
-			return (*(ops[i]).f);
+		if (s == ops[i].op)
+			return (*ops[i].f);
 		i++;
 	}
 
