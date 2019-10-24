@@ -9,7 +9,6 @@
  */
 int main (int argc, char *argv[])
 {
-	int n1, n2;
 	int (*p2func)(int,int);
 
 	if (argc != 4)
@@ -18,23 +17,20 @@ int main (int argc, char *argv[])
 		exit(98);
 	}
 
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[3]);
-
-	if (n2 == 0 &&(*argv[2] == '%' ||
+	if (atoi(argv[3]) == 0 &&(*argv[2] == '%' ||
 		       *argv[2] == '/'))
 	{
 		printf("Error\n");
-		return(100);
+		exit(100);
 	}
 
 	p2func = get_op_func(argv[2]);
 	if (p2func == NULL)
 	{
 		printf("Error\n");
-		return(99);
+		exit(99);
 	}
-	printf("%d\n", p2func(n1, n2));
+	printf("%d\n", p2func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 
 }
