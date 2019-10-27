@@ -2,6 +2,10 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * print_all - function that prints anything
+ * @format: list of different formats
+ */
 void print_all(const char * const format, ...)
 {
 	va_list arg;
@@ -40,7 +44,7 @@ void print_all(const char * const format, ...)
 		}
 		if ((format[i] == 'c' || format[i] == 'i' ||
 		     format[i] == 'f' || format[i] == 's') &&
-		    format[(i+1)] != '\0')
+		    format[(i + 1)] != '\0')
 			printf(", ");
 		i++;
 	}
