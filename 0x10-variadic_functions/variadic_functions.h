@@ -1,5 +1,5 @@
-#ifndef VARIADIC_FUNCTIONS_H
-#define VARIADIC_FUNCTIONS_H
+#ifndef _VARIADIC_FUNCTIONS_H
+#define _VARIADIC_FUNCTIONS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +15,11 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-
+/**
+ * struct printall - structure of list of characters and functions
+ * @list: pointer to strings
+ * @f: pointer to functions
+ */
 typedef struct printall
 {
 	char *list;
