@@ -1,97 +1,47 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-/**
- * print_ch - print char
- * @arg: string
- */
-void print_ch(va_list arg)
-{
-	char character;
-
-	character = va_arg(arg, int);
-	printf("%c", character);
-}
-/**
- * print_in - print int
- * @arg: string
- */
-
-void print_in(va_list arg)
-{
-	int integer;
-
-	integer = va_arg(arg, int);
-	printf("%d", integer);
-}
-/**
- * print_fl - print float
- * @arg: string
- */
-
-void print_fl(va_list arg)
-{
-	float number;
-
-	number = va_arg(arg, double);
-	printf("%f", number);
-}
-/**
- * print_st - print string
- * @arg: string
- */
-
-void print_st(va_list arg)
-{
-	char *string;
-
-	string = va_arg(arg, char *);
-
-	if (string == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", string);
-}
-
-/**
- * print_all - function that prints anything
- * @format: format of your arguments
- */
 
 void print_all(const char * const format, ...)
 {
 	va_list arg;
-	int i, j = 0;
-	char *sep;
-
-	sep = "";
-
-	printall_t options[] = {
-		{"c", print_ch},
-		{"i", print_in},
-		{"f", print_fl},
-		{"s", print_st},
-		{NULL, NULL}
-	};
+	int i = 0;
+	char *temp;
 
 	va_start(arg, format);
 	i = 0;
-	j = 0;
-	while (format && format[i])
+	while (format == NULL)
 	{
-		j = 0;
-		while (options[j].list)
+		printf("\n");
+		return;
+	}
+	while (format[i] != '\0')
+	{
+		switch (format[i])
 		{
-			if (*options[j].list == format[i])
+		case 'c':
+			printf("%c", (char) va_arg(arg, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(arg, int));
+			break;
+		case 'f':
+			printf("%f", (float)va_arg(arg, double));
+			break;
+		case 's':
+			temp = va_arg(arg, char *);
+			if (temp != NULL)
 			{
-				printf("%s", sep);
-				options[j].f(arg);
-				sep = ", ";
+				printf("%s", temp);
+				break;
 			}
-			j++;
+			printf("(nil)");
+			break;
 		}
+		if ((format[i] == 'c' || format[i] == 'i' ||
+		     format[i] == 'f' || format[i] == 's') &&
+		    format[(i+1)] != '\0')
+			printf(", ");
 		i++;
 	}
 	printf("\n");
