@@ -4,48 +4,75 @@
  * print_all - function that prints anything
  * @format: format of your arguments
  */
-void print_all(const char * const format, ...)
-{
-	va_list buffer;
-	int i = 0;
-	char *temp;
 
-	va_start(buffer, format);
-	while (format == NULL)
+void print_ch(va_list arg)
+{
+	char character;
+	character = va_arg(arg, int);
+	printf("%c", character);
+}
+
+void print_in(va_list arg)
+{
+	int integer;
+	integer = va_arg(arg, int);
+	printf("%d", integer);
+}
+
+void print_fl(va_list arg)
+{
+	float number;
+	number = va_arg(arg, double);
+	printf("%f", number);
+}
+
+void print_st (va_list arg)
+{
+	char *string;
+	string = va_arg(arg, char *);
+
+	if (string == NULL)
 	{
-		printf("\n");
+		printf("(nil)");
 		return;
 	}
-	while (format[i] != '\0')
+	printf("%s", string);
+}
+
+
+void print_all(const char * const format, ...)
+{
+	va_list arg;
+	int i, j = 0;
+	char *sep;
+	sep = "";
+
+	printall_t options[] = {
+		{"c", print_ch},
+		{"i", print_in},
+		{"f", print_fl},
+		{"s", print_st},
+		{NULL, NULL}
+	};
+
+	va_start(arg, format);
+	i = 0;
+	j = 0;
+	while (format && format[i])
+	{
+		j = 0;
+		while (options[j].list)
 		{
-		switch (format[i])
+			if (*options[j].list == format[i])
 			{
-			case 'c':
-				printf("%c", (char)va_arg(buffer, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(buffer, int));
-				break;
-			case 'f':
-				printf("%f", (float)va_arg(buffer, double));
-				break;
-			case 's':
-				temp = va_arg(buffer, char *);
-				if (temp == NULL)
-				{
-					printf("(nil)");
-					return;
-				}
-				printf("%s", temp);
-				break;
+				printf("%s", sep);
+				options[j].f(arg);
+				sep = ", ";
 			}
-			if ((format[i + 1] != '\0' ) && (format[i] == 'c' ||
-						     format[i] == 'i' ||
-						     format[i] == 'f' ||
-						     format[i] == 's'))
-				printf(", ");
-			i++;
+			j++;
+		}
+		i++;
 	}
 	printf("\n");
-	va_end(buffer);
+	va_end(arg);
 }
