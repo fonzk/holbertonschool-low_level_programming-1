@@ -28,6 +28,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int num = 0;
 	int digits, hold;
 
+	if (b == '\0')
+		return (0);
+
 	digits = 0;
 	while (b[digits])
 		digits++;
