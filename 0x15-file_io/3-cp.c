@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * void - entry
- * @fie: file name
+ * _close - close program
+ * @file: file name
  */
 void _close(int file)
 {
@@ -18,7 +18,7 @@ void _close(int file)
 
 /**
  * main - entry
- * @arg: number of arguments
+ * @argc: number of arguments
  * @argv: arguments
  * Return: 0
  */
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	}
 
 
-	close(filefrom);
-	close(fileto);
+	_close(filefrom);
+	_close(fileto);
 
 }
