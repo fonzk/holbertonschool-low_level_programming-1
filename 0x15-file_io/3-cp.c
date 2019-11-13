@@ -24,7 +24,9 @@ void _close(int file)
  */
 int main(int argc, char *argv[])
 {
-	int filefrom, fileto;
+	int filefrom, fileto, fw;
+	ssize_t count;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -46,7 +48,13 @@ int main(int argc, char *argv[])
 	}
 
 
+/* need to check if read works here */ 
+	while ((count = read(filefrom, buffer, 1024)) != 0)
+		fw = write(fileto, buffer, count);
+
+
 	_close(filefrom);
 	_close(fileto);
 
+	return (0);
 }
