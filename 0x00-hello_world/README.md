@@ -47,11 +47,10 @@ What you should learn from this project:
 * Write a C program that prints the size of various types on the computer it is compiled and run on.
 
 
-### [7. What happens when you type gcc main.c](./100-intel)
-* Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate.
+### [7. Intel](./100-intel)
+* Write a blog post that explains all the steps of compilatio. Use command lines and examples to illustrate.
 
-
-### [8. Intel](./101-quote.c)
+### [8. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity](./101-quote.c)
 * Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
 
 
